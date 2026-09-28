@@ -73,3 +73,18 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Settings.meta
+Assets/Settings/DefaultVolumeProfile.asset
+Assets/Settings/DefaultVolumeProfile.asset.meta
+Assets/Settings/Mobile_Renderer.asset
+Assets/Settings/Mobile_Renderer.asset.meta
+Assets/Settings/Mobile_RPAsset.asset
+Assets/Settings/Mobile_RPAsset.asset.meta
+Assets/Settings/PC_Renderer.asset
+Assets/Settings/PC_Renderer.asset.meta
+Assets/Settings/PC_RPAsset.asset
+Assets/Settings/PC_RPAsset.asset.meta
+Assets/Settings/SampleSceneProfile.asset
+Assets/Settings/SampleSceneProfile.asset.meta
+Assets/Settings/UniversalRenderPipelineGlobalSettings.asset
+Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta
