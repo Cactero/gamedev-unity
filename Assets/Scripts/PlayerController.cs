@@ -49,6 +49,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
 
         Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f; // 0.02 is Unity's default fixedDeltaTime
+        Time.fixedDeltaTime = 0.02f;
     }
 }
