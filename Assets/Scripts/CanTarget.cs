@@ -1,29 +1,42 @@
 using UnityEngine;
 
-public class TargetCan : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+public class CanTarget : MonoBehaviour
 {
-    public float knockDownAngle = 45f;
-    private bool _isKnockedDown = false;
+    public float speed = 2f;
     
-    private GameManager _gameManager;
+    public float distance = 3f;
+
+    private Rigidbody rb;
+    private Vector3 startPosition;
 
     void Start()
     {
-        _gameManager = FindAnyObjectByType<GameManager>();
+        rb = GetComponent<Rigidbody>();
+        startPosition = rb.position;
+        
+        rb.useGravity = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (_isKnockedDown) return;
-
-        if (Vector3.Angle(transform.up, Vector3.up) > knockDownAngle)
+        if (Vector3.Angle(Vector3.up, transform.up) > 2f)
         {
-            _isKnockedDown = true;
+            rb.useGravity = true; 
             
-            if (_gameManager != null)
+            if (GameManager.Instance != null)
             {
-                _gameManager.CanKnockedDown();
+                GameManager.Instance.CanKnockedDown();
             }
+
+            this.enabled = false;
+            
+            return;
         }
+
+        float offset = Mathf.Sin(Time.time * speed) * distance;
+        
+        Vector3 newPosition = new Vector3(startPosition.x + offset, rb.position.y, rb.position.z);
+        rb.MovePosition(newPosition);
     }
 }
