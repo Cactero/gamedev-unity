@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HUDElement" style="flex-grow: 1;">
+        <ui:Label text="Cans Left: 6" name="ScoreLabel" style="font-size: 40px; margin-bottom: 4px; margin-left: 50px; margin-top: 30px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="WinElement" style="flex-grow: 1; align-items: center; justify-content: center; visibility: visible; display: flex;">
+        <ui:Label text="You win!" name="WinLabel" style="justify-content: flex-end; align-items: auto; align-self: center; align-content: center; font-size: 79px; width: 445px; height: 435px; -unity-text-align: middle-center; display: flex; visibility: visible;"/>
+    </ui:VisualElement>
+</ui:UXML>
